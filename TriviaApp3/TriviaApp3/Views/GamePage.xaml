@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriviaApp3.Views.GamePage"
+             Title="GamePage"
+             BackgroundColor="DarkCyan">
+
+    <Grid RowSpacing="10" ColumnSpacing="10" RowDefinitions=".2*, *, *, *" ColumnDefinitions="*, *">
+        
+        <Label
+            TextColor="White"
+            Style="{StaticResource CategoryStyle}"
+            x:Name="CategoryLabel"
+            Grid.ColumnSpan="2"
+            FontFamily="serif"
+            HorizontalOptions="Center"
+            />
+
+        <Button
+            FontSize="17"
+            Clicked="QuestionButtonCLicked"
+            BackgroundColor="LightGray"
+            TextColor="Black"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            x:Name="QuestionField"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"/>
+
+        <Button
+            FontSize="17"
+            Clicked="AnswerButtonClicked"
+            BackgroundColor="Bisque"
+            TextColor="Black"
+            Grid.Row="2"
+            x:Name="FirstAnswerField"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"/>
+
+        <Button
+            FontSize="17"
+            Clicked="AnswerButtonClicked"
+            BackgroundColor="Bisque"
+            TextColor="Black"
+            Grid.Row="2" Grid.Column="1"
+            x:Name="SecondAnswerField"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"/>
+
+        <Button
+            FontSize="17"
+            Clicked="AnswerButtonClicked"
+            BackgroundColor="Bisque"
+            TextColor="Black"
+            Grid.Row="3"
+            x:Name="ThirdAnswerField"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"/>
+
+        <Button
+            FontSize="17"
+            Clicked="AnswerButtonClicked"
+            BackgroundColor="Bisque"
+            TextColor="Black"
+            Grid.Row="3" Grid.Column="1"
+            x:Name="FourthAnswerField"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"/>
+    </Grid>
+</ContentPage>

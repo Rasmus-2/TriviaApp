@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriviaApp3.Views.LoginPage"
+             Title="LoginPage"
+             BackgroundColor="DarkCyan">
+    <VerticalStackLayout
+        Margin="40"
+        Spacing="10">
+
+        <Label 
+            Style="{StaticResource Headline}"
+            TextColor="Black"
+            Padding="10"
+            BackgroundColor="LightGray"
+            Text="Login or Sign up"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            FontSize="17"
+            TextColor="White"
+            Text="Enter Username"/>
+
+        <Entry
+            BackgroundColor="White"
+            x:Name="UserNameEntry"
+            Placeholder="username"/>
+
+        <Label
+            Margin="0,20,0,0"
+            FontSize="17"
+            TextColor="White"
+            Text="Enter Password"/>
+
+        <Entry
+            BackgroundColor="White"
+            x:Name="PasswordEntry"
+            Placeholder="password"
+            IsPassword="True"/>
+
+        <Button
+            Margin="0,35,0,0"
+            Style="{StaticResource NavButton}"
+            Clicked="OnLoginButtonClicked"
+            Text="Login"/>
+
+        <Button
+            Margin="0,10,0,0"
+            Style="{StaticResource NavButton}"
+            Clicked="OnSignUpButtonClicked"
+            Text="Sign up"/>
+
+        <Label
+            x:Name="InfoLabel"/>
+
+    </VerticalStackLayout>
+</ContentPage>

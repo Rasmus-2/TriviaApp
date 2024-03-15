@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriviaApp3.Views.StatisticsPage"
+             Title="StatisticsPage"
+             BackgroundColor="Bisque">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Button
+                Style="{StaticResource NavButton}"
+                Clicked="MainMenuButtonClicked"
+                Margin="50"
+                x:Name="MainMenuButton"
+                Text="Back to menu" 
+                SemanticProperties.Hint="Goes back to main menu"
+                HorizontalOptions="Fill" />
+
+            <ListView ItemsSource="{Binding UserDataList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="12"
+                                  RowDefinitions="*"
+                                  ColumnDefinitions="*, *">
+                                <Label
+                                    Text="{Binding Category}"></Label>
+                                <Label
+                                    Grid.Column="1"
+                                    Text="{Binding Percentage, StringFormat='{0}%'}"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriviaApp3.MainPage">
+
+    <ScrollView
+        BackgroundColor="DarkCyan">
+        <VerticalStackLayout
+            Margin="20"
+            Padding="30,0"
+            Spacing="25">
+
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*">
+
+                <Label
+                    
+                    Padding="0"
+                    Grid.Column="0"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    x:Name="UserNameLabel"/>
+                
+                <Button
+                    Style="{StaticResource NavButton}"
+                    Grid.Column="3"
+                    Clicked="LogOutButtonClicked"
+                    HorizontalOptions="End"
+                    
+                    Text="Log out"/>
+                
+            </Grid>
+        
+            <Image
+                Source="trivia_logo.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Black and white logo that says trivia." />
+
+            <Label
+                Text="Welcome to Trivia Mania"
+                Style="{StaticResource Headline}"
+                TextColor="White"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome text for the trivia app" />
+
+            <Button
+                Style="{StaticResource NavButton}"
+                x:Name="PlayButton"
+                Text="Play" 
+                SemanticProperties.Hint="Starts the game"
+                Clicked="PlayButtonClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Style="{StaticResource NavButton}"
+                x:Name="SettingsButton"
+                Text="Settings" 
+                SemanticProperties.Hint="Starts the game"
+                Clicked="SettingsButtonClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Style="{StaticResource NavButton}"
+                x:Name="StatisticsButton"
+                Text="Statistics"
+                SemanticProperties.Hint="Starts the game"
+                Clicked="StatisticsButtonClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Style="{StaticResource NavButton}"
+                x:Name="QuitButton"
+                Text="Quit"
+                SemanticProperties.Hint="Starts the game"
+                Clicked="QuitButtonClicked"
+                HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

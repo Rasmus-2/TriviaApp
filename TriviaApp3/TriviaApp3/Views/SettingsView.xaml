@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriviaApp3.Views.SettingsView"
+             Title="SettingsView"
+             BackgroundColor="Bisque">
+    <VerticalStackLayout Margin="20" Spacing="10">
+        <Label 
+            Text="Settings"
+            Style="{StaticResource Headline}"
+            HorizontalOptions="Start"/>
+
+        <Label 
+            Text="Difficulty"
+            Style="{StaticResource SubHeadline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <RadioButton
+            x:Name="EasyButton"
+            CheckedChanged="RadioButtonCheckedChanged"
+            Content="Easy" GroupName="Difficulty"
+            Value="easy"
+            />
+        
+        <RadioButton
+            x:Name="MediumButton"
+            CheckedChanged="RadioButtonCheckedChanged"
+            Content="Medium" GroupName="Difficulty"
+            Value="medium"
+            />
+
+        <RadioButton
+            x:Name="HardButton"
+            CheckedChanged="RadioButtonCheckedChanged"
+            Content="Hard" GroupName="Difficulty"
+            Value="hard"
+            />
+
+        <Label 
+            x:Name="NumberOfQuestionsLabel"
+            Text="Number of questions"
+            Style="{StaticResource SubHeadline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Slider x:Name="Slider" Minimum="1" Maximum="50"
+                MinimumTrackColor="Lime" MaximumTrackColor="DarkRed"
+                ThumbColor="Purple" ValueChanged="SliderValueChanged"/>
+
+        <Label
+            x:Name="TestLabel"/>
+
+        <Button
+            Style="{StaticResource NavButton}"
+            Clicked="MainMenuButtonClicked"
+            Margin="50"
+            x:Name="MainMenuButton"
+            Text="Back to menu" 
+            SemanticProperties.Hint="Goes back to main menu"
+            HorizontalOptions="Fill" />
+
+    </VerticalStackLayout>
+</ContentPage>
