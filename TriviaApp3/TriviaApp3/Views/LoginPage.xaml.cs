@@ -73,7 +73,7 @@ public partial class LoginPage : ContentPage
             await DataAccessLayer.DB.GetUserCollection().InsertOneAsync(newUser);
             settings.SetCurrentUser(newUser.UserName);
             FileIO.WriteAndReplace(newUser.UserName);
-            Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }
